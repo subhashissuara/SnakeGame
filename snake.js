@@ -75,8 +75,6 @@ function Snake() {
             if (this.x === this.tail[i].x && this.y === this.tail[i].y) {
                 alert("Game Over! Score:" + this.total);
                 this.highscore = this.total
-                document.querySelector('.highscore')
-                .innerText = "High Score (For this Session):" + snake.highscore;
                 this.total = 0;
                 this.tail = [];
                 alert("Press OK to Play Again!");
