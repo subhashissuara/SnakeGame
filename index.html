@@ -1,25 +1,82 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Snake Game</title>
-    </head>
-    <body>
-        <center>  
-        <canvas 
-            class="canvas" 
-            height="300" 
-            width="300" 
-            style="background-color: #3e3e3e; width: 30%"">
-        </canvas>
-        <h2 class="score"></h2>
-        <h2 class="highscore"></h2>
-        <img src="./Images/Up Button.png" alt="Up Button" id="up" style="width:5%">
-        <img src="./Images/Down Button.png" alt="Down Button" id="down" style="width:5%">
-        <img src="./Images/Left Button.png" alt="Left Button" id="left" style="width:5%">
-        <img src="./Images/Right Button.png" alt="Right Button" id="right" style="width:5%">
-    </body>
-    <script>alert("Press OK to Play!");</script>
-    <script type="text/javascript" src="fruit.js"></script>
-    <script type="text/javascript" src="snake.js"></script>
-    <script type="text/javascript" src="canvas.js"></script>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        canvas {
+            background-color: #3e3e3e;
+            width: 30%;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+
+        @media (pointer: coarse) {
+            body {
+                font-size: 10px;
+            }
+
+            canvas {
+                background-color: #3e3e3e;
+                width: 80%;
+            }
+
+            img {
+                max-width: 18%;
+                height: auto;
+                width: auto;
+                margin: 1px;
+            }
+        }
+
+        @media (pointer: fine) {
+            #buttons {
+                display: none;
+            }
+
+            #instructions span {
+                display: none;
+            }
+
+            #instructions:after {
+                content: 'Use the arrow keys on keyboard to play!';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        alert("Press OK to Start!")
+    </script>
+    <h1>Snake Game</h1>
+    <canvas class="canvas" height="300" width="300" style="border: 10px solid red;">
+    </canvas>
+    <h2 class=" score"></h2>
+    <h2 class="highscore"></h2>
+    <h3 id="instructions"><span>Use the arrow buttons to play!</span></h3>
+    <div id="buttons">
+        <img src="./Images/Up Button.png" alt="Up Button" id="up"><br>
+        <img src="./Images/Left Button.png" alt="Left Button" id="left">
+        <img src="./Images/Down Button.png" alt="Down Button" id="down">
+        <img src="./Images/Right Button.png" alt="Right Button" id="right">
+    </div>
+
+</body>
+<script type="text/javascript" src="fruit.js?v=1.0"></script>
+<script type="text/javascript" src="snake.js?v=1.0"></script>
+<script type="text/javascript" src="canvas.js?v=1.0"></script>
+
 </html>

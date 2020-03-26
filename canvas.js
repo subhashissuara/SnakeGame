@@ -22,15 +22,15 @@ var snake;
         snake.update();
         snake.canvas();
 
-        if(snake.eat(fruit)) {
+        if (snake.eat(fruit)) {
             fruit.pickLocation();
         }
 
         snake.checkCollision();
         document.querySelector('.score')
-            .innerText = "Score:" + snake.total;
+            .innerText = "Score: " + snake.total;
         document.querySelector('.highscore')
-            .innerText = "High Score (For this Session):" + snake.highscore;
+            .innerText = "High Score (For this Session): " + snake.highscore;
     }, 150);
 }());
 
